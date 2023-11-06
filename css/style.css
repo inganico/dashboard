@@ -575,7 +575,7 @@ iframe {
   content: "";
   display: block;
   position: absolute;
-  background: url("../../img/pencil.svg") no-repeat;
+  background: url("../img/pencil.svg") no-repeat;
   width: 32px;
   height: 32px;
   bottom: 0;
@@ -588,7 +588,7 @@ iframe {
   content: "";
   display: block;
   position: absolute;
-  background: url("../../img/pencil-1.svg") no-repeat;
+  background: url("../img/pencil-1.svg") no-repeat;
   width: 32px;
   height: 32px;
   bottom: 0;
