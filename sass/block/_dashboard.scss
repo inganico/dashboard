@@ -1,0 +1,128 @@
+.test {
+
+  &__dashboard-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 464px;
+  }
+
+  &__dashboard {
+    max-width: 188px;
+    background-color: #fff;
+    height: 910px;
+    border-top-left-radius: 32px;
+    border-top-right-radius: 32px;
+    padding: 60px 49px 20px 20px;
+
+    @include small-tablet {
+      height: 1013px;
+    }
+
+    @include tablet {
+      height: 1065px;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+  
+  &__dashboard-list {
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: column;
+    row-gap: 61px;
+    position: relative;
+
+    @include small-tablet {
+      margin-bottom: 100px;
+    }
+
+    @include tablet {
+      margin-bottom: 165px
+    }
+
+  }
+  
+  &__dashboard-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &_active {
+
+      &::after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 8px;
+        height: 60px;
+        border-radius: 8px;
+        background-color: var(--color-orange);
+        right: -77px;
+        top: -18px;
+      }
+    }
+  }
+
+  &__dashboard-link {
+    display: flex;
+    align-items: center;
+    transition: color 0.25s ease;
+    
+    &:hover {
+      color: var(--color-orange);
+    }
+  }
+
+  &__dashboard-link_exit {
+    display: flex;
+    align-items: center;
+  }
+  
+  &__dashboard-svg:hover {
+    color: var(--color-orange);
+  }
+
+  &__dashboard-text {
+    margin-left: 10px;
+  }
+
+  &__exit-btn {
+    font-size: 16px;
+    color: var(--color-black);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 20px;
+      top: 0px;
+      left: 49px;
+    }
+
+    &:hover{
+      color: var(--color-orange);
+    }
+  }
+
+  &__exit {
+    display: flex;
+    align-items: center;
+    &:hover {
+      color: var(--color-orange);
+    }
+  }
+  
+  &__exit-svg {
+    margin-left: 10px;
+
+    &:hover {
+      color: var(--color-orange);
+    }
+  } 
+
+
+}

@@ -1,0 +1,49 @@
+.test {
+
+  &__nav {
+    padding-bottom: 41px;
+
+    @include mobile {
+      padding-bottom: 0px
+    }
+  }
+  
+  &__nav-menu {
+    padding-top: 31px;
+
+    @include mobile {
+      padding-top: 0px;
+    }
+  }
+  
+  &__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 76px;
+
+    @include big-desktop {
+      column-gap: 36px;
+    }
+
+    @include desktop {
+      column-gap: 0;
+    }
+
+    @include small-tablet{
+      display: none;
+    }
+  }
+  
+  &__nav-item {
+    margin-left: 20px;
+    }
+  
+  &__nav-link {
+    transition: color 0.25s ease-in;
+
+    &:hover {
+      color: var(--color-orange);
+    }
+  }
+}

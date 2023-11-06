@@ -1,0 +1,61 @@
+.test {
+
+  &__menu-footer {
+    display: none;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 150%;
+      height: 1px;
+      background-color: var(--color-light);
+      top: -10px;
+      left: -40px;
+    }
+    
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  
+  &__menu-footer-link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    gap: 5px;
+    transition: color 0.25s linear;
+
+    &:hover {
+      color: var(--color-orange);
+    }
+  }
+  
+  &__menu-footer-svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    &:hover + span{
+      color: var(--color-orange);
+    }
+  }
+
+  &__menu-footer-text {
+    display: block;
+    font-size: 10px;
+    color: var(--color-black);
+    transition: color 0.25s linear;
+    position: relative;
+
+
+    &:hover {
+      color: var(--color-orange);
+    }
+  }
+
+}
+  

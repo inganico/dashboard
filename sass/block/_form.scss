@@ -1,0 +1,109 @@
+.test {
+
+  &__form {
+
+  }
+  
+  &__forma {
+    display: flex;
+    flex-direction: column;
+    max-width: 609px;
+    margin-left: 188px;
+    padding-bottom: 20px;
+
+    @include small-tablet {
+      margin-left: 100px;
+    }
+
+    @include small-tablet {
+      margin: 30px
+    }
+
+    @include mobile {
+      margin: 0 auto;
+    }
+  }
+  
+  &__forma-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-family: Inter;
+    font-weight: 600;
+    
+  }
+  
+  &__forma-lable {
+    color: var(--color-form-text);
+    font-size: 12px;
+    margin-bottom: 20px;
+    position: relative;
+
+    &:after {
+      content: attr(data-add);
+      display: block;
+      position: absolute;
+      top: -54px;
+      left: 16px;
+      opacity: 0;
+    }
+
+    &_margin {
+      margin-bottom: 42px;
+    }
+  }
+  
+  &__forma-input {
+    width: 100%;
+    background: var(--color-light);
+    border: none;
+    height: 56px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    border-radius: 8px;
+    outline: var(--color-light);
+    margin-bottom: 7px;
+    color: var(--color-black);
+    transition: outline 0.25s linear;
+    caret-color: var(--color-orange);
+
+    &:disabled {
+      outline: 1px solid var(--color-outline-des);
+      color: var(--color-outline-des);
+      background-color: var(--color-white);
+    }
+
+    &:disabled:hover {
+      outline: 1px solid var(--color-outline-des);
+    }
+
+
+    &:invalid {
+      outline: 1px solid var(--color-red);
+    }
+
+
+    &_padding {
+      padding-bottom: 15px;
+    }
+
+    &:hover {
+      outline: 1px solid var(--color-orange);
+    }
+
+    &:active {
+      outline: 1px solid var(--color-orange);
+    }
+
+    &:focus {
+      outline: 1px solid var(--color-orange);
+    }
+  }
+}
+
+
+.test__forma-input:hover + .test__forma-lable::after {
+  opacity: 1;
+}
+  
+  
